@@ -1,0 +1,39 @@
+{
+  "name": "live_audio_room",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@react-navigation/native": "^6.1.1",
+    "@react-navigation/native-stack": "^6.9.7",
+    "@zegocloud/zego-uikit-prebuilt-live-audio-room-rn": "^1.0.6",
+    "@zegocloud/zego-uikit-rn": "^1.4.10",
+    "@zegocloud/zego-uikit-signaling-plugin-rn": "^1.0.4",
+    "react": "17.0.2",
+    "react-delegate-component": "^1.0.0",
+    "react-native": "0.68.5",
+    "react-native-safe-area-context": "^4.4.1",
+    "react-native-screens": "^3.18.2",
+    "zego-express-engine-reactnative": "3.0.3",
+    "zego-zim-react-native": "2.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@babel/runtime": "^7.20.6",
+    "@react-native-community/eslint-config": "^3.2.0",
+    "babel-jest": "^29.3.1",
+    "eslint": "^8.30.0",
+    "jest": "^29.3.1",
+    "metro-react-native-babel-preset": "^0.73.6",
+    "react-test-renderer": "17.0.2"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
