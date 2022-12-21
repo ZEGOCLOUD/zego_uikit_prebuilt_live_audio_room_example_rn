@@ -55,57 +55,17 @@ To build a live audio app from scratch, you may check our [Voice Call](https://d
 
 1. Add @zegocloud/zego-uikit-prebuilt-live-audio-room-rn as dependencies.
 
-<div class="multiple-select-codes">
-  <div class="code-tabs hide-scrollbar">
-    <div class="scroll-box">
-      <span class="tab-item">
-        <span>yarn</span>
-      </span>
-      <span class="tab-item">
-        <span>npm</span>
-      </span>
-    </div>
-  </div>
-  <div class="code-list">
-
 ```bash
 yarn add @zegocloud/zego-uikit-prebuilt-live-audio-room-rn
 ```
-
-```bash
-npm install @zegocloud/zego-uikit-prebuilt-live-audio-room-rn
-```
-
-  </div>
-</div>
 
 2. Add other dependencies.
 
 Run the following command to install other dependencies for making sure the `@zegocloud/zego-uikit-prebuilt-live-audio-room-rn` can work properly:
 
-<div class="multiple-select-codes">
-  <div class="code-tabs hide-scrollbar">
-    <div class="scroll-box">
-      <span class="tab-item">
-        <span>yarn</span>
-      </span>
-      <span class="tab-item">
-        <span>npm</span>
-      </span>
-    </div>
-  </div>
-  <div class="code-list">
-
 ```bash
 yarn add react-delegate-component @react-navigation/native @react-navigation/native-stack react-native-screens react-native-safe-area-context zego-express-engine-reactnative@3.0.3 zego-zim-react-native@2.4.0 @zegocloud/zego-uikit-rn @zegocloud/zego-uikit-signaling-plugin-rn
 ```
-
-```bash
-npm install react-delegate-component @react-navigation/native @react-navigation/native-stack react-native-screens react-native-safe-area-context zego-express-engine-reactnative@3.0.3 zego-zim-react-native@2.4.0 @zegocloud/zego-uikit-rn @zegocloud/zego-uikit-signaling-plugin-rn
-```
-
-  </div>
-</div>
 
 ### Using the ZegoUIKitPrebuiltLiveAudioRoom Component in your project
 
@@ -207,55 +167,15 @@ If your device is not performing well or you found a UI stuttering, run in **Rel
 
 - Run on an iOS device:
 
-<div class="multiple-select-codes">
-  <div class="code-tabs hide-scrollbar">
-    <div class="scroll-box">
-      <span class="tab-item">
-        <span>yarn</span>
-      </span>
-      <span class="tab-item">
-        <span>npm</span>
-      </span>
-    </div>
-  </div>
-  <div class="code-list">
-
 ```bash
 yarn ios
 ```
 
-```bash
-npm run ios
-```
-
-  </div>
-</div>
-
 - Run on an Android device:
-
-<div class="multiple-select-codes">
-  <div class="code-tabs hide-scrollbar">
-    <div class="scroll-box">
-      <span class="tab-item">
-        <span>yarn</span>
-      </span>
-      <span class="tab-item">
-        <span>npm</span>
-      </span>
-    </div>
-  </div>
-  <div class="code-list">
 
 ```bash
 yarn android
 ```
-
-```bash
-npm run android
-```
-
-  </div>
-</div>
 
 ## Related guide
 
