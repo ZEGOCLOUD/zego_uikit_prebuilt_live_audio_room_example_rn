@@ -149,6 +149,11 @@ export default function HostPage(props) {
         roomID={roomID}
         config={{
           ...HOST_DEFAULT_CONFIG,
+          avatar: 'https://www.zegocloud.com/_nuxt/img/discord_nav@2x.8739674.png',
+          userInRoomAttributes: { test: '123' },
+          onUserCountOrPropertyChanged: (userList) => {
+            console.log('HostPage onUserCountOrPropertyChanged', userList);
+          },
           layoutConfig: {
             rowConfigs,
             rowSpacing,

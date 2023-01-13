@@ -148,6 +148,11 @@ export default function AudiencePage(props) {
         roomID={roomID}
         config={{
           ...AUDIENCE_DEFAULT_CONFIG,
+          avatar: 'https://www.zegocloud.com/_nuxt/img/discord_nav@2x.8739674.png',
+          userInRoomAttributes: { test: '123' },
+          onUserCountOrPropertyChanged: (userList) => {
+            console.log('AudiencePage onUserCountOrPropertyChanged', userList);
+          },
           layoutConfig: {
             rowConfigs,
             rowSpacing,

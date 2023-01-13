@@ -12,8 +12,8 @@
   "dependencies": {
     "@react-navigation/native": "^6.1.1",
     "@react-navigation/native-stack": "^6.9.7",
-    "@zegocloud/zego-uikit-prebuilt-live-audio-room-rn": "^1.0.6",
-    "@zegocloud/zego-uikit-rn": "^1.4.10",
+    "@zegocloud/zego-uikit-prebuilt-live-audio-room-rn": "^1.0.8",
+    "@zegocloud/zego-uikit-rn": "^1.9.1",
     "@zegocloud/zego-uikit-signaling-plugin-rn": "^1.0.4",
     "react": "17.0.2",
     "react-delegate-component": "^1.0.0",

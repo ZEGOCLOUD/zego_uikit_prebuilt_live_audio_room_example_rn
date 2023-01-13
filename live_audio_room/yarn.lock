@@ -1808,18 +1808,18 @@
     "@typescript-eslint/types" "5.47.0"
     eslint-visitor-keys "^3.3.0"
 
-"@zegocloud/zego-uikit-prebuilt-live-audio-room-rn@^1.0.6":
-  version "1.0.6"
-  resolved "https://registry.npmjs.org/@zegocloud/zego-uikit-prebuilt-live-audio-room-rn/-/zego-uikit-prebuilt-live-audio-room-rn-1.0.6.tgz#d8da3adca1ea5a88a8fae715ef17d4020ade996d"
-  integrity sha512-uFlCJwPJZkVXrVHscFajqu0ljCgzrfMys4gFtX4e6A713ouXmPJWrV7iKADR89xs1uuGUF9hNasdHzy63+8okg==
+"@zegocloud/zego-uikit-prebuilt-live-audio-room-rn@^1.0.8":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@zegocloud/zego-uikit-prebuilt-live-audio-room-rn/-/zego-uikit-prebuilt-live-audio-room-rn-1.0.8.tgz#38bfcf934895f7b8c37c3206be44aa0631d724aa"
+  integrity sha512-sw/SjWnoULoTG8wG21E2HyquQa8/g0MR5sLSqRozFuIjn9Vst3AFAZYW53KX/x0bGz9wYOaaZbGB+gv3LZLZ8w==
   dependencies:
     "@zegocloud/zego-uikit-signaling-plugin-rn" "^1.0.4"
     zego-zim-react-native "2.4.0"
 
-"@zegocloud/zego-uikit-rn@^1.4.10":
-  version "1.4.10"
-  resolved "https://registry.npmjs.org/@zegocloud/zego-uikit-rn/-/zego-uikit-rn-1.4.10.tgz#9327ed9c8a36376284b5ab0da1fff7b7d904e5a3"
-  integrity sha512-OrmVGYSklPRwKLqw2DSD9BS5Mp4XxQlEWfHgvqFm+I3vMi/uEWUwSv8TuM6vP4mczSNDBRKTss+EkvfhrYPwAg==
+"@zegocloud/zego-uikit-rn@^1.9.1":
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/@zegocloud/zego-uikit-rn/-/zego-uikit-rn-1.9.1.tgz#8641690aa5b52b32419a18eb28d77abe277c2f92"
+  integrity sha512-IgBnqNdhmG97u6CRH5WYq4mK27KCdrIH1JuWbt+ZuClJUcIrJg/c3z7RE6EGzm9kiA2zK3I+5v1+M8ZAziFSkA==
   dependencies:
     "@react-navigation/native" "^6.1.0"
     "@react-navigation/native-stack" "^6.9.5"

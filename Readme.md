@@ -98,6 +98,9 @@ export default function LiveAudioRoomPage(props) {
         config={{
           // You can also use HOST_DEFAULT_CONFIG/AUDIENCE_DEFAULT_CONFIG to make more types of calls.
           ...HOST_DEFAULT_CONFIG,
+          avatar: '',
+          userInRoomAttributes: {},
+          onUserCountOrPropertyChanged: (userList) => {},
           onLeaveConfirmation: () => {
             props.navigation.navigate('HomePage');
           },
