@@ -76,6 +76,10 @@ yarn add react-delegate-component @react-navigation/native @react-navigation/nat
 
 - `userID`, `userName` and `roomID` can only contain numbers, letters, and underlines (\_).
 - Users that join the room with the same `roomID` can talk to each other.
+- For a single user, the sum of all Key-Value pairs must be within 100 bytes and a maximum of 20 pairs can be configured.
+- Each Key must be within 8 bytes.
+- Each Value must be within 64 bytes.
+
 </div>
 
 ```javascript
