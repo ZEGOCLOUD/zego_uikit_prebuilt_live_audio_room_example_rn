@@ -138,7 +138,6 @@ export default function HostPage(props) {
       </View>
     );
   };
-
   return (
     <View style={styles.container}>
       <ZegoUIKitPrebuiltLiveAudioRoom
@@ -152,7 +151,7 @@ export default function HostPage(props) {
           avatar: 'https://www.zegocloud.com/_nuxt/img/discord_nav@2x.8739674.png',
           userInRoomAttributes: { test: '123' },
           onUserCountOrPropertyChanged: (userList) => {
-            console.log('HostPage onUserCountOrPropertyChanged', userList);
+            console.log('[Demo]HostPage onUserCountOrPropertyChanged', userList);
           },
           layoutConfig: {
             rowConfigs,
@@ -168,6 +167,33 @@ export default function HostPage(props) {
           onLeaveConfirmation: () => {
             props.navigation.navigate('HomePage');
           },
+          onSeatTakingRequested: (audience) => {
+            console.log('[Demo]HostPage onSeatTakingRequested ', audience);
+          },
+          onSeatTakingRequestCanceled: (audience) => {
+            console.log('[Demo]HostPage onSeatTakingRequestCanceled ', audience);
+          },
+          onSeatTakingInviteRejected: () => {
+            console.log('[Demo]HostPage onSeatTakingInviteRejected ');
+          },
+          // onMemberListMoreButtonPressed: (user) => {
+          //   console.log('[Demo]HostPage onMemberListMoreButtonPressed ', user);
+          // },
+          onSeatsChanged: (takenSeats, untakenSeats) => {
+            console.log('[Demo]HostPage onSeatsChanged ', takenSeats, untakenSeats);
+          },
+          onSeatsClosed: () => {
+            console.log('[Demo]HostPage onSeatsClosed ');
+          },
+          onSeatsOpened: () => {
+            console.log('[Demo]HostPage onSeatsOpened ');
+          },
+          onTurnOnYourMicrophoneRequest: (fromUser) => {
+            console.log('[Demo]HostPage onTurnOnYourMicrophoneRequest ', fromUser);
+          },
+          // onSeatClicked: (index, user) => {
+          //   console.log('[Demo]HostPage onSeatClicked ', index, user);
+          // },
         }}
       />
     </View>

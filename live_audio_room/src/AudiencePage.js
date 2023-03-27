@@ -151,7 +151,7 @@ export default function AudiencePage(props) {
           avatar: 'https://www.zegocloud.com/_nuxt/img/discord_nav@2x.8739674.png',
           userInRoomAttributes: { test: '123' },
           onUserCountOrPropertyChanged: (userList) => {
-            console.log('AudiencePage onUserCountOrPropertyChanged', userList);
+            console.log('[Demo]AudiencePage onUserCountOrPropertyChanged', userList);
           },
           layoutConfig: {
             rowConfigs,
@@ -167,6 +167,30 @@ export default function AudiencePage(props) {
           onLeaveConfirmation: () => {
             props.navigation.navigate('HomePage');
           },
+          onSeatTakingRequestRejected: () => {
+            console.log('[Demo]AudiencePage onSeatTakingRequestRejected ');
+          },
+          onHostSeatTakingInviteSent: () => {
+            console.log('[Demo]AudiencePage onHostSeatTakingInviteSent ');
+          },
+          // onMemberListMoreButtonPressed: (user) => {
+          //   console.log('[Demo]AudiencePage onMemberListMoreButtonPressed ', user);
+          // },
+          onSeatsChanged: (takenSeats, untakenSeats) => {
+            console.log('[Demo]AudiencePage onSeatsChanged ', takenSeats, untakenSeats);
+          },
+          onSeatsClosed: () => {
+            console.log('[Demo]AudiencePage onSeatsClosed ');
+          },
+          onSeatsOpened: () => {
+            console.log('[Demo]AudiencePage onSeatsOpened ');
+          },
+          onTurnOnYourMicrophoneRequest: (fromUser) => {
+            console.log('[Demo]AudiencePage onTurnOnYourMicrophoneRequest ', fromUser);
+          },
+          // onSeatClicked: (index, user) => {
+          //   console.log('[Demo]AudiencePage onSeatClicked ', index, user);
+          // },
         }}
       />
     </View>
