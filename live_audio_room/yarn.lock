@@ -1679,10 +1679,10 @@
     "@typescript-eslint/types" "5.47.0"
     eslint-visitor-keys "^3.3.0"
 
-"@zegocloud/zego-uikit-prebuilt-live-audio-room-rn@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@zegocloud/zego-uikit-prebuilt-live-audio-room-rn/-/zego-uikit-prebuilt-live-audio-room-rn-1.2.0.tgz#5b7261b521203ac50606dd41d10f1b3d9d0ff280"
-  integrity sha512-aThGhwtZzd+mYmhDuu+EhOXvDAtOF6z5QexuXEQhpGUnU/k0FTbeQHd71eFsfNirwzEOVTfOp5pvEgN5C/z8/Q==
+"@zegocloud/zego-uikit-prebuilt-live-audio-room-rn@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@zegocloud/zego-uikit-prebuilt-live-audio-room-rn/-/zego-uikit-prebuilt-live-audio-room-rn-1.2.1.tgz#39a945e35d1942763021a8888a8438d06b82c09b"
+  integrity sha512-2RVwtdDzlfq/Xh/Fc6GeutX3j+jda//2oDiEBVZlg+Fm9FMjl/6EGzcZKkEuw5T27MRXxd9TGL3eVswHW8HnEA==
   dependencies:
     "@zegocloud/zimkit-react" "^1.2.1"
 
@@ -7035,7 +7035,7 @@ zego-express-engine-reactnative@3.2.0:
   resolved "https://registry.yarnpkg.com/zego-express-engine-reactnative/-/zego-express-engine-reactnative-3.2.0.tgz#e4098a7ff0434110e9363e231d896f4bb0eec900"
   integrity sha512-UkAw+PdFesNg2NiXZxifhG2KP67RGPE1QYj5jo8wXp3gswM5axeyIqKuqJeBxhkKdPPGei8jQ5MFmTXrVaRm5Q==
 
-zego-zim-react-native@^2.7.1:
+zego-zim-react-native@2.7.1:
   version "2.7.1"
   resolved "https://registry.yarnpkg.com/zego-zim-react-native/-/zego-zim-react-native-2.7.1.tgz#0abc906cb25a92902745ba37e30ae14efe446109"
   integrity sha512-9NyOZR1yBwwcOjmao21Uow83+Cq5fnTrAtPFH4n2IU5wumA5prdvtBXz6u4WkPB8aGtTXEmDNfPwm3xk/3WAdA==
@@ -7052,7 +7052,7 @@ zego-zim-web@^2.4.2:
     protobufjs "^6.11.2"
     spark-md5 "^3.0.2"
 
-zego-zpns-react-native@^2.3.1:
+zego-zpns-react-native@2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/zego-zpns-react-native/-/zego-zpns-react-native-2.3.1.tgz#df01def9a9f582adee4de77c49077e5be16cff0e"
   integrity sha512-PRtzhWaJz/4bPdRb7NKIJtXrB9gRMaMI77pNUkbqmVj16ApupHTn4hE2iRz8ROoybwwBhUZiNAZm4X21YBSP+A==
