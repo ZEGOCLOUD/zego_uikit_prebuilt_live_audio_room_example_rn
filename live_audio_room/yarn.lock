@@ -7035,10 +7035,10 @@ zego-express-engine-reactnative@3.2.0:
   resolved "https://registry.yarnpkg.com/zego-express-engine-reactnative/-/zego-express-engine-reactnative-3.2.0.tgz#e4098a7ff0434110e9363e231d896f4bb0eec900"
   integrity sha512-UkAw+PdFesNg2NiXZxifhG2KP67RGPE1QYj5jo8wXp3gswM5axeyIqKuqJeBxhkKdPPGei8jQ5MFmTXrVaRm5Q==
 
-zego-zim-react-native@2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/zego-zim-react-native/-/zego-zim-react-native-2.5.0.tgz#6088a444d0f690499a13884c01b71d05390f63d6"
-  integrity sha512-SZ6FABfq/89j+vNElUdAItxxHMT0yx+/PReAOvYRdg7KyzJIXbKSqxpQF22jKxYfYKEKnh1KzYL73tw7D8Ekjg==
+zego-zim-react-native@^2.7.1:
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/zego-zim-react-native/-/zego-zim-react-native-2.7.1.tgz#0abc906cb25a92902745ba37e30ae14efe446109"
+  integrity sha512-9NyOZR1yBwwcOjmao21Uow83+Cq5fnTrAtPFH4n2IU5wumA5prdvtBXz6u4WkPB8aGtTXEmDNfPwm3xk/3WAdA==
 
 zego-zim-web@^2.4.2:
   version "2.7.0"
@@ -7052,7 +7052,7 @@ zego-zim-web@^2.4.2:
     protobufjs "^6.11.2"
     spark-md5 "^3.0.2"
 
-zego-zpns-react-native@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/zego-zpns-react-native/-/zego-zpns-react-native-2.2.0.tgz#ac9618ef12cfe7f4007bb6cbe90bc6ff1d374821"
-  integrity sha512-lNwdDwrYnb0gelwmMhyLfw6Lv6BtJNTbOcV3z3Kz+IusUXNxU32K2N7/E86vDfk8QndPxT89tSK4ipMD8+ew4A==
+zego-zpns-react-native@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/zego-zpns-react-native/-/zego-zpns-react-native-2.3.1.tgz#df01def9a9f582adee4de77c49077e5be16cff0e"
+  integrity sha512-PRtzhWaJz/4bPdRb7NKIJtXrB9gRMaMI77pNUkbqmVj16ApupHTn4hE2iRz8ROoybwwBhUZiNAZm4X21YBSP+A==
