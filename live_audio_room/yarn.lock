@@ -1686,10 +1686,10 @@
   dependencies:
     "@zegocloud/zimkit-react" "^1.2.1"
 
-"@zegocloud/zego-uikit-rn@^1.12.2":
-  version "1.12.2"
-  resolved "https://registry.yarnpkg.com/@zegocloud/zego-uikit-rn/-/zego-uikit-rn-1.12.2.tgz#f9d063ddd36e9f354159377aaa52ee9d846083a8"
-  integrity sha512-0eVUY7lBeI6HBOrj61X/bipMYOCXS8VbMoSLr7e33H1iFkWFhVjtaSpSdx4BWe91hq1UgqN8TCAUDRt5aEs2Ag==
+"@zegocloud/zego-uikit-rn@^1.12.3":
+  version "1.12.3"
+  resolved "https://registry.yarnpkg.com/@zegocloud/zego-uikit-rn/-/zego-uikit-rn-1.12.3.tgz#03973ca5cc2611145c8901742bbb2a2cefa46500"
+  integrity sha512-TU0YaunmId1110smL8tLJMRz2Hc5zxuNjCuA9OvmFcZCP7yvOl31V3QROciQydTfI9TM0s3LptN/6Vh2MvoGww==
 
 "@zegocloud/zego-uikit-signaling-plugin-rn@^1.2.8":
   version "1.2.8"

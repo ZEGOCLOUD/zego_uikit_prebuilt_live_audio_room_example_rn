@@ -13,7 +13,7 @@
     "@react-navigation/native": "^6.1.1",
     "@react-navigation/native-stack": "^6.9.7",
     "@zegocloud/zego-uikit-prebuilt-live-audio-room-rn": "^1.2.1",
-    "@zegocloud/zego-uikit-rn": "^1.12.2",
+    "@zegocloud/zego-uikit-rn": "^1.12.3",
     "@zegocloud/zego-uikit-signaling-plugin-rn": "^1.2.8",
     "react": "17.0.2",
     "react-delegate-component": "^1.0.0",
