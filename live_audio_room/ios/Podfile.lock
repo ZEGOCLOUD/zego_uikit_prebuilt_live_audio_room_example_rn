@@ -294,7 +294,7 @@ PODS:
   - react-native-zego-zim (2.7.1):
     - React
     - ZIM (= 2.7.1)
-  - react-native-zego-zpns (2.3.1):
+  - react-native-zego-zpns (2.3.3):
     - React
     - ZPNs (= 2.1.0)
   - React-perflogger (0.68.5)
@@ -567,7 +567,7 @@ SPEC CHECKSUMS:
   react-native-safe-area-context: 99b24a0c5acd0d5dcac2b1a7f18c49ea317be99a
   react-native-zego-express-engine: 47e48e9e647bc973827a04f0c09723a9f3421feb
   react-native-zego-zim: b35ee3f60bbe3961538fdaf4e7b8601b05bf6ff4
-  react-native-zego-zpns: 43386bc9ceb62178d6c7cd4c4838bec5a714be82
+  react-native-zego-zpns: fc293b46e455d6f051eb381f90c9ba6f1a2aeed1
   React-perflogger: 0458a87ea9a7342079e7a31b0d32b3734fb8415f
   React-RCTActionSheet: 22538001ea2926dea001111dd2846c13a0730bc9
   React-RCTAnimation: 732ce66878d4aa151d56a0d142b1105aa12fd313
