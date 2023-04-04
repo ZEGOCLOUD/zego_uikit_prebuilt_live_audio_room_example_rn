@@ -7,103 +7,23 @@ import ZegoUIKitPrebuiltLiveAudioRoom, {
 export default function HostPage(props) {
   const {route} = props;
   const {params} = route;
-  const {userID, userName, roomID, layoutType} = params;
-  let rowConfigs = [];
+  const {userID, userName, roomID} = params;
+  let rowConfigs = [
+    {
+      count: 4,
+      seatSpacing: 16,
+      alignment: ZegoLiveAudioRoomLayoutAlignment.spaceAround,
+    },
+    {
+      count: 4,
+      seatSpacing: 16,
+      alignment: ZegoLiveAudioRoomLayoutAlignment.spaceAround,
+    },
+  ];
   let rowSpacing = 0;
-  let takeSeatIndexWhenJoining = -1;
+  let takeSeatIndexWhenJoining = 0;
   let backgroundColor = 'transparent';
   let hostSeatIndexes = [0];
-  switch (layoutType) {
-    case 0:
-      rowConfigs = [
-        {
-          count: 4,
-          seatSpacing: 16,
-          alignment: ZegoLiveAudioRoomLayoutAlignment.spaceAround,
-        },
-        {
-          count: 4,
-          seatSpacing: 16,
-          alignment: ZegoLiveAudioRoomLayoutAlignment.spaceAround,
-        },
-      ];
-      takeSeatIndexWhenJoining = 0;
-      break;
-    case 1:
-      rowConfigs = [
-        {
-          count: 4,
-          seatSpacing: 0,
-          alignment: ZegoLiveAudioRoomLayoutAlignment.spaceBetween,
-        },
-        {
-          count: 4,
-          seatSpacing: 0,
-          alignment: ZegoLiveAudioRoomLayoutAlignment.spaceBetween,
-        },
-        {
-          count: 4,
-          seatSpacing: 0,
-          alignment: ZegoLiveAudioRoomLayoutAlignment.spaceBetween,
-        },
-        {
-          count: 4,
-          seatSpacing: 0,
-          alignment: ZegoLiveAudioRoomLayoutAlignment.spaceBetween,
-        },
-      ];
-      rowSpacing = 5;
-      takeSeatIndexWhenJoining = 0;
-      break;
-    case 2:
-      rowConfigs = [
-        {
-          count: 1,
-          seatSpacing: 0,
-          alignment: ZegoLiveAudioRoomLayoutAlignment.center,
-        },
-        {
-          count: 3,
-          seatSpacing: 0,
-          alignment: ZegoLiveAudioRoomLayoutAlignment.spaceBetween,
-        },
-        {
-          count: 3,
-          seatSpacing: 0,
-          alignment: ZegoLiveAudioRoomLayoutAlignment.spaceBetween,
-        },
-        {
-          count: 2,
-          seatSpacing: 0,
-          alignment: ZegoLiveAudioRoomLayoutAlignment.spaceEvenly,
-        },
-      ];
-      rowSpacing = 0;
-      takeSeatIndexWhenJoining = 0;
-      backgroundColor = '#ccc';
-      break;
-    case 3:
-      rowConfigs = [
-        {
-          count: 3,
-          seatSpacing: 0,
-          alignment: ZegoLiveAudioRoomLayoutAlignment.spaceBetween,
-        },
-        {
-          count: 3,
-          seatSpacing: 0,
-          alignment: ZegoLiveAudioRoomLayoutAlignment.spaceBetween,
-        },
-        {
-          count: 3,
-          seatSpacing: 0,
-          alignment: ZegoLiveAudioRoomLayoutAlignment.spaceBetween,
-        },
-      ];
-      takeSeatIndexWhenJoining = 4;
-      hostSeatIndexes = [4];
-      break;
-  }
   const foregroundBuilder = ({userInfo}) => {
     return (
       <View style={styles.builder}>

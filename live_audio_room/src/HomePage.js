@@ -9,30 +9,15 @@ export default function HomePage(props) {
       userID: userID,
       userName: userID,
       roomID: roomID,
-      layoutType,
     });
   };
   const [userID, setUserID] = useState('');
   const [roomID, setRoomID] = useState('');
-  const [layoutType, setLayoutType] = useState(0);
   useEffect(() => {
     setUserID(String(Math.floor(Math.random() * 100000)));
     setRoomID(String(Math.floor(Math.random() * 10000)));
   }, []);
   const insets = useSafeAreaInsets();
-  const layoutArr = [
-    {name: '默认（2行4列）', color: '#000'},
-    {name: '全排满样式', color: '#ccc'},
-    {name: 'Host首行居中样式', color: '#ccc'},
-    {name: 'Host居中样式', color: '#ccc'},
-  ];
-  const [newlayoutArr, setLayoutArr] = useState(layoutArr);
-  const onLayoutBtnPress = index => {
-    setLayoutType(index);
-    layoutArr[0].color = '#ccc';
-    layoutArr[index].color = '#000';
-    setLayoutArr(layoutArr);
-  };
   return (
     <View
       style={[
@@ -66,21 +51,6 @@ export default function HomePage(props) {
             onJoinPress(false);
           }}
         />
-      </View>
-      <View style={styles.selectBox}>
-        {newlayoutArr.map((item, index) => {
-          return (
-            <Button
-              key={index}
-              style={styles.check}
-              title={item.name}
-              color={item.color}
-              onPress={() => {
-                onLayoutBtnPress(index);
-              }}
-            />
-          );
-        })}
       </View>
     </View>
   );
