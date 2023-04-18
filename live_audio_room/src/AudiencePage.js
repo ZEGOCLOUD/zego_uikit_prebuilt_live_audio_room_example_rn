@@ -4,6 +4,7 @@ import ZegoUIKitPrebuiltLiveAudioRoom, {
   AUDIENCE_DEFAULT_CONFIG,
   ZegoLiveAudioRoomLayoutAlignment,
 } from '@zegocloud/zego-uikit-prebuilt-live-audio-room-rn';
+import KeyCenter from "../KeyCenter";
 export default function AudiencePage(props) {
   const {route} = props;
   const {params} = route;
@@ -61,8 +62,8 @@ export default function AudiencePage(props) {
   return (
     <View style={styles.container}>
       <ZegoUIKitPrebuiltLiveAudioRoom
-        appID={yourAppID}
-        appSign={yourAppSign}
+        appID={KeyCenter.appID}
+        appSign={KeyCenter.appSign}
         userID={userID}
         userName={userName}
         roomID={roomID}
