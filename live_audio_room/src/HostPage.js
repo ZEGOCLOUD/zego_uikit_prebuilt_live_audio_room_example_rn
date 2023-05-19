@@ -2,6 +2,7 @@ import React from 'react';
 import {StyleSheet, View, Text, Image, ImageBackground} from 'react-native';
 import ZegoUIKitPrebuiltLiveAudioRoom, {
   HOST_DEFAULT_CONFIG,
+  ZegoMenuBarButtonName,
   ZegoLiveAudioRoomLayoutAlignment,
 } from '@zegocloud/zego-uikit-prebuilt-live-audio-room-rn';
 import KeyCenter from "../KeyCenter";
@@ -84,6 +85,9 @@ export default function HostPage(props) {
             backgroundColor,
             foregroundBuilder,
           },
+          topMenuBarConfig: {
+            buttons: [ZegoMenuBarButtonName.minimizingButton, ZegoMenuBarButtonName.leaveButton],
+          },
           background,
           onLeaveConfirmation: () => {
             props.navigation.navigate('HomePage');
@@ -115,6 +119,18 @@ export default function HostPage(props) {
           // onSeatClicked: (index, user) => {
           //   console.log('[Demo]HostPage onSeatClicked ', index, user);
           // },
+          onWindowMinimized: () => {
+            console.log('[Demo]HostPage onWindowMinimized');
+            props.navigation.navigate('HomePage');
+          },
+          onWindowMaximized: () => {
+            console.log('[Demo]HostPage onWindowMaximized');
+            props.navigation.navigate('HostPage', {
+              userID: userID,
+              userName: userName,
+              roomID: roomID,
+            });
+          },
         }}
       />
     </View>

@@ -2,13 +2,14 @@ import React from 'react';
 import {StyleSheet, View, Image, Text, ImageBackground} from 'react-native';
 import ZegoUIKitPrebuiltLiveAudioRoom, {
   AUDIENCE_DEFAULT_CONFIG,
+  ZegoMenuBarButtonName,
   ZegoLiveAudioRoomLayoutAlignment,
 } from '@zegocloud/zego-uikit-prebuilt-live-audio-room-rn';
 import KeyCenter from "../KeyCenter";
 export default function AudiencePage(props) {
   const {route} = props;
   const {params} = route;
-  const {userID, userName, roomID, layoutType} = params;
+  const {userID, userName, roomID} = params;
   let rowConfigs = [
     {
       count: 4,
@@ -85,6 +86,9 @@ export default function AudiencePage(props) {
             backgroundColor,
           },
           background,
+          topMenuBarConfig: {
+            buttons: [ZegoMenuBarButtonName.minimizingButton, ZegoMenuBarButtonName.leaveButton],
+          },
           onLeaveConfirmation: () => {
             props.navigation.navigate('HomePage');
           },
@@ -112,6 +116,18 @@ export default function AudiencePage(props) {
           // onSeatClicked: (index, user) => {
           //   console.log('[Demo]AudiencePage onSeatClicked ', index, user);
           // },
+          onWindowMinimized: () => {
+            console.log('[Demo]AudiencePage onWindowMinimized');
+            props.navigation.navigate('HomePage');
+          },
+          onWindowMaximized: () => {
+            console.log('[Demo]AudiencePage onWindowMaximized');
+            props.navigation.navigate('AudiencePage', {
+              userID: userID,
+              userName: userName,
+              roomID: roomID,
+            });
+          },
         }}
       />
     </View>
