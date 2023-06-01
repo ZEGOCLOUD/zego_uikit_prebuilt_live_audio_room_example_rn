@@ -20,7 +20,8 @@
     "react-native-safe-area-context": "^4.4.1",
     "react-native-screens": "^3.18.2",
     "zego-express-engine-reactnative": "3.2.0",
-    "zego-zim-react-native": "2.7.1"
+    "zego-zim-react-native": "2.7.1",
+    "zego-zpns-react-native": "^2.3.6"
   },
   "devDependencies": {
     "@babel/core": "^7.20.5",

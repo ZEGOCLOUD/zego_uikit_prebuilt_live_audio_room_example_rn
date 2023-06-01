@@ -1,5 +1,5 @@
-import React from 'react';
-import {StyleSheet, View, Image, Text, ImageBackground} from 'react-native';
+import React, { useRef, useState } from 'react';
+import {StyleSheet, View, Image, Text, ImageBackground, Button, Modal, TouchableWithoutFeedback} from 'react-native';
 import ZegoUIKitPrebuiltLiveAudioRoom, {
   AUDIENCE_DEFAULT_CONFIG,
   ZegoMenuBarButtonName,
@@ -7,6 +7,7 @@ import ZegoUIKitPrebuiltLiveAudioRoom, {
 } from '@zegocloud/zego-uikit-prebuilt-live-audio-room-rn';
 import KeyCenter from "../KeyCenter";
 export default function AudiencePage(props) {
+  const prebuiltRef = useRef();
   const {route} = props;
   const {params} = route;
   const {userID, userName, roomID} = params;
@@ -47,7 +48,7 @@ export default function AudiencePage(props) {
       </View>
     );
   };
-  const image = {uri: 'xxx'};
+  const image = {uri: 'https://www.zegocloud.com/_nuxt/img/live_woman.1489130.png'};
   const background = () => {
     return (
       <View style={styles.backgroundView}>
@@ -60,76 +61,174 @@ export default function AudiencePage(props) {
       </View>
     );
   };
+
+  const [modalVisible, setModalVisible] = useState(false);
+  const [selectedUser, setSelectedUser] = useState({});
+  const [selectedIndex, setSelectedIndex] = useState();
+  const [isSeatsClosed, setIsSeatsClosed] = useState(false);
+  
+  const seatClickedHandle = (index, user) => {
+    if (!user) {
+      // The seat is empty
+      setModalVisible(true);
+      setSelectedUser({});
+      setSelectedIndex(index);
+    } else {
+      if (user.userID === userID) {
+        // Speaker himself
+        setModalVisible(true);
+        setSelectedUser(user);
+        setSelectedIndex(index);
+      } else {
+        // Other speaker
+      }
+    }
+  }
   return (
     <View style={styles.container}>
-      <ZegoUIKitPrebuiltLiveAudioRoom
-        appID={KeyCenter.appID}
-        appSign={KeyCenter.appSign}
-        userID={userID}
-        userName={userName}
-        roomID={roomID}
-        config={{
-          ...AUDIENCE_DEFAULT_CONFIG,
-          avatar: 'https://www.zegocloud.com/_nuxt/img/discord_nav@2x.8739674.png',
-          userInRoomAttributes: { test: '123' },
-          onUserCountOrPropertyChanged: (userList) => {
-            console.log('[Demo]AudiencePage onUserCountOrPropertyChanged', userList);
-          },
-          layoutConfig: {
-            rowConfigs,
-            rowSpacing,
-          },
-          takeSeatIndexWhenJoining,
-          hostSeatIndexes,
-          seatConfig: {
-            foregroundBuilder,
-            backgroundColor,
-          },
-          background,
-          topMenuBarConfig: {
-            buttons: [ZegoMenuBarButtonName.minimizingButton, ZegoMenuBarButtonName.leaveButton],
-          },
-          onLeaveConfirmation: () => {
-            props.navigation.navigate('HomePage');
-          },
-          onSeatTakingRequestRejected: () => {
-            console.log('[Demo]AudiencePage onSeatTakingRequestRejected ');
-          },
-          onHostSeatTakingInviteSent: () => {
-            console.log('[Demo]AudiencePage onHostSeatTakingInviteSent ');
-          },
-          // onMemberListMoreButtonPressed: (user) => {
-          //   console.log('[Demo]AudiencePage onMemberListMoreButtonPressed ', user);
-          // },
-          onSeatsChanged: (takenSeats, untakenSeats) => {
-            console.log('[Demo]AudiencePage onSeatsChanged ', takenSeats, untakenSeats);
-          },
-          onSeatsClosed: () => {
-            console.log('[Demo]AudiencePage onSeatsClosed ');
-          },
-          onSeatsOpened: () => {
-            console.log('[Demo]AudiencePage onSeatsOpened ');
-          },
-          onTurnOnYourMicrophoneRequest: (fromUser) => {
-            console.log('[Demo]AudiencePage onTurnOnYourMicrophoneRequest ', fromUser);
-          },
-          // onSeatClicked: (index, user) => {
-          //   console.log('[Demo]AudiencePage onSeatClicked ', index, user);
-          // },
-          onWindowMinimized: () => {
-            console.log('[Demo]AudiencePage onWindowMinimized');
-            props.navigation.navigate('HomePage');
-          },
-          onWindowMaximized: () => {
-            console.log('[Demo]AudiencePage onWindowMaximized');
-            props.navigation.navigate('AudiencePage', {
-              userID: userID,
-              userName: userName,
-              roomID: roomID,
-            });
-          },
-        }}
-      />
+      <View style={styles.prebuiltContainer}>
+        <ZegoUIKitPrebuiltLiveAudioRoom
+          ref={prebuiltRef}
+          appID={KeyCenter.appID}
+          appSign={KeyCenter.appSign}
+          userID={userID}
+          userName={userName}
+          roomID={roomID}
+          config={{
+            ...AUDIENCE_DEFAULT_CONFIG,
+            avatar: 'https://www.zegocloud.com/_nuxt/img/discord_nav@2x.8739674.png',
+            userInRoomAttributes: { test: '123' },
+            onUserCountOrPropertyChanged: (userList) => {
+              console.log('[Demo]AudiencePage onUserCountOrPropertyChanged', userList);
+            },
+            layoutConfig: {
+              rowConfigs,
+              rowSpacing,
+            },
+            takeSeatIndexWhenJoining,
+            hostSeatIndexes,
+            seatConfig: {
+              foregroundBuilder,
+              backgroundColor,
+            },
+            background,
+            topMenuBarConfig: {
+              // Do not show the unwanted button
+              buttons: [],
+            },
+            bottomMenuBarConfig: {
+              // Do not show the unwanted button
+              hostButtons: [
+                ZegoMenuBarButtonName.toggleMicrophoneButton,
+              ],
+              speakerButtons: [
+                ZegoMenuBarButtonName.toggleMicrophoneButton,
+              ],
+              audienceButtons: [],
+            },
+            onLeaveConfirmation: () => {
+              props.navigation.navigate('HomePage');
+            },
+            onSeatTakingRequestRejected: () => {
+              console.log('[Demo]AudiencePage onSeatTakingRequestRejected ');
+            },
+            onHostSeatTakingInviteSent: () => {
+              console.log('[Demo]AudiencePage onHostSeatTakingInviteSent ');
+            },
+            // onMemberListMoreButtonPressed: (user) => {
+            //   console.log('[Demo]AudiencePage onMemberListMoreButtonPressed ', user);
+            // },
+            onSeatsChanged: (takenSeats, untakenSeats) => {
+              console.log('[Demo]AudiencePage onSeatsChanged ', takenSeats, untakenSeats);
+            },
+            onSeatsClosed: () => {
+              console.log('[Demo]AudiencePage onSeatsClosed ');
+              setIsSeatsClosed(true);
+            },
+            onSeatsOpened: () => {
+              console.log('[Demo]AudiencePage onSeatsOpened ');
+              setIsSeatsClosed(false);
+            },
+            onTurnOnYourMicrophoneRequest: (fromUser) => {
+              console.log('[Demo]AudiencePage onTurnOnYourMicrophoneRequest ', fromUser);
+            },
+            onSeatClicked: (index, user) => {
+              console.log('[Demo]AudiencePage onSeatClicked ', index, user);
+              seatClickedHandle(index, user);
+            },
+            onWindowMinimized: () => {
+              console.log('[Demo]AudiencePage onWindowMinimized');
+              props.navigation.navigate('HomePage');
+            },
+            onWindowMaximized: () => {
+              console.log('[Demo]AudiencePage onWindowMaximized');
+              props.navigation.navigate('AudiencePage', {
+                userID: userID,
+                userName: userName,
+                roomID: roomID,
+              });
+            },
+          }}
+        />
+      </View>
+      <View style={styles.btnContainer}>
+        <View style={styles.itemBtnContainer}>
+          <Button title='minimize window' onPress={
+            () => {
+              prebuiltRef.current.minimizeWindow();
+            }
+          }></Button>
+          <Button title='leave' onPress={
+            () => {
+              prebuiltRef.current.leave();
+            }
+          }></Button>
+        </View>
+      </View>
+      <View style={styles.modalContainer}>
+        <Modal
+          animationType="fade"
+          transparent={true}
+          visible={modalVisible}
+        >
+          <TouchableWithoutFeedback
+            onPress={() => {
+              setModalVisible(false);
+            }}
+          >
+          <View style={styles.modalMask}>
+            {
+              selectedIndex !== undefined ? <View style={styles.bottomBtnContainer}>
+                {
+                  !selectedUser.userID ? <Button title='take seat' onPress={
+                    () => {
+                      prebuiltRef.current.leaveSeat().finally(() => {
+                        if (!isSeatsClosed) {
+                          prebuiltRef.current.takeSeat(selectedIndex).then(() => {
+                            setModalVisible(false);
+                          });
+                        } else {
+                          prebuiltRef.current.applyToTakeSeat().then(() => {
+                            setModalVisible(false);
+                          });
+                        }
+                      })
+                    }
+                  }></Button> : <Button title='leave seat' onPress={
+                    () => {
+                      prebuiltRef.current.leaveSeat().then(() => {
+                        setModalVisible(false);
+                      });
+                    }
+                  }></Button>
+                }
+                <View style={styles.divideLine}></View>
+              </View> : null
+            }
+          </View>
+          </TouchableWithoutFeedback>
+        </Modal>
+      </View>
     </View>
   );
 }
@@ -137,8 +236,6 @@ export default function AudiencePage(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
     zIndex: 0,
   },
   builder: {
@@ -198,4 +295,32 @@ const styles = StyleSheet.create({
     resizeMode: 'cover',
     justifyContent: 'center',
   },
+  btnContainer: {
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    height: '30%',
+  },
+  itemBtnContainer: {
+    width: '100%',
+    marginTop: 20,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+  },
+  prebuiltContainer: {
+    flex: 1,
+  },
+  modalMask: {
+    backgroundColor: 'rgba(0,0,0,0.3)',
+    width: '100%',
+    height: '100%',
+  },
+  bottomBtnContainer: {
+    width: '100%',
+    position: 'absolute',
+    bottom: 20,
+  },
+  divideLine: {
+    height: 1,
+    backgroundColor: '#ddd',
+  }
 });

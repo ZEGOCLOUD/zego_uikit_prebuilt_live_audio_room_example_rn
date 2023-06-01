@@ -6805,3 +6805,8 @@ zego-zim-react-native@2.7.1:
   version "2.7.1"
   resolved "https://registry.yarnpkg.com/zego-zim-react-native/-/zego-zim-react-native-2.7.1.tgz#0abc906cb25a92902745ba37e30ae14efe446109"
   integrity sha512-9NyOZR1yBwwcOjmao21Uow83+Cq5fnTrAtPFH4n2IU5wumA5prdvtBXz6u4WkPB8aGtTXEmDNfPwm3xk/3WAdA==
+
+zego-zpns-react-native@^2.3.6:
+  version "2.3.6"
+  resolved "https://registry.yarnpkg.com/zego-zpns-react-native/-/zego-zpns-react-native-2.3.6.tgz#cab015c3e4e587782dab1af276cc0d7f4aad2c15"
+  integrity sha512-WLT8fG9Oysn4nItNCGcnhQjnUGID+JJa7rCGIQlnEvlvu6VbXd5u5Q9oD8F5Bc+TigPbiTRBDhL9VSackRqXYA==
