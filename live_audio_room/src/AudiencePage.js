@@ -208,7 +208,9 @@ export default function AudiencePage(props) {
                             setModalVisible(false);
                           });
                         } else {
-                          prebuiltRef.current.applyToTakeSeat().then(() => {
+                          // Apply for take seat
+                          console.log('[Demo]AudiencePage Apply for connecting wheat');
+                          prebuiltRef.current.applyToTakeSeat(selectedIndex).then(() => {
                             setModalVisible(false);
                           });
                         }
