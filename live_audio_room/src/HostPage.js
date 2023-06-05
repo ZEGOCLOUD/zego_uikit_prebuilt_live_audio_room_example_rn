@@ -1,10 +1,11 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import {StyleSheet, View, Text, Image, ImageBackground, Button, Modal, TouchableWithoutFeedback} from 'react-native';
 import ZegoUIKitPrebuiltLiveAudioRoom, {
   HOST_DEFAULT_CONFIG,
   ZegoMenuBarButtonName,
   ZegoLiveAudioRoomLayoutAlignment,
 } from '@zegocloud/zego-uikit-prebuilt-live-audio-room-rn';
+import ZegoUIKit from "@zegocloud/zego-uikit-rn";
 import KeyCenter from "../KeyCenter";
 export default function HostPage(props) {
   const prebuiltRef = useRef();
@@ -83,6 +84,36 @@ export default function HostPage(props) {
       console.log('[Demo]HostPage acceptSeatTakingRequest', audience.userID);
     });
   }
+
+  const [userList, setUserList] = useState([]);
+  useEffect(() => {
+    const callbackID =
+      'HostPage' + String(Math.floor(Math.random() * 10000));
+    // 
+    ZegoUIKit.onRoomStateChanged(callbackID, (reason) => {
+      if (reason == 1 || reason == 4) {
+        // Logined || Reconnected
+        const temp = ZegoUIKit.getAllUsers();
+        setUserList(temp);
+      }
+    });
+    ZegoUIKit.onUserJoin(callbackID, () => {
+      // User join
+      const temp = ZegoUIKit.getAllUsers();
+      setUserList(temp);
+    });
+    ZegoUIKit.onUserLeave(callbackID, () => {
+      // User leave
+      const temp = ZegoUIKit.getAllUsers();
+      setUserList(temp);
+    });
+    return () => {
+      ZegoUIKit.onRoomStateChanged(callbackID);
+      ZegoUIKit.onUserJoin(callbackID);
+      ZegoUIKit.onUserLeave(callbackID);
+    }
+  }, []);
+
   return (
     <View style={styles.container}>
       <View style={styles.prebuiltContainer}>
