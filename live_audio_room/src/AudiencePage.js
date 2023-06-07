@@ -47,6 +47,17 @@ export default function AudiencePage(props) {
       </View>
     );
   };
+  const avatarBuilder = ({userInfo}) => {
+    return <View style={styles.avatarBuilder}>
+      {
+        userInfo.inRoomAttributes && userInfo.inRoomAttributes.avatar ? <Image 
+          style={{ width: '100%', height: '100%', resizeMode: 'cover' }}
+          resizeMode="cover"
+          source={{ uri: userInfo.inRoomAttributes.avatar }}
+        /> : null
+      }
+    </View>
+  };
   const image = {uri: 'xxx'};
   const background = () => {
     return (
@@ -84,6 +95,7 @@ export default function AudiencePage(props) {
           seatConfig: {
             foregroundBuilder,
             backgroundColor,
+            avatarBuilder,
           },
           background,
           topMenuBarConfig: {
@@ -164,6 +176,10 @@ const styles = StyleSheet.create({
     fontSize: 10,
     color: '#000',
     zIndex: 3,
+  },
+  avatarBuilder: {
+    width: '100%',
+    height: '100%',
   },
   hostIcon: {
     position: 'absolute',
