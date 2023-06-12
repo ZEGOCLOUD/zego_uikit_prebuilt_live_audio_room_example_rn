@@ -49,6 +49,18 @@ export default function AudiencePage(props) {
       </View>
     );
   };
+
+  const avatarBuilder = ({userInfo}) => {
+    return <View style={styles.avatarBuilder}>
+      {
+        userInfo.inRoomAttributes && userInfo.inRoomAttributes.avatar ? <Image 
+          style={{ width: '100%', height: '100%', resizeMode: 'cover' }}
+          resizeMode="cover"
+          source={{ uri: userInfo.inRoomAttributes.avatar }}
+        /> : null
+      }
+    </View>
+  };
   const image = {uri: 'https://www.zegocloud.com/_nuxt/img/live_woman.1489130.png'};
   const background = () => {
     return (
@@ -141,6 +153,7 @@ export default function AudiencePage(props) {
             seatConfig: {
               foregroundBuilder,
               backgroundColor,
+              avatarBuilder,
             },
             background,
             topMenuBarConfig: {
@@ -301,6 +314,10 @@ const styles = StyleSheet.create({
     width: 47,
     height: 12,
     zIndex: 3,
+  },
+  avatarBuilder: {
+    width: '100%',
+    height: '100%',
   },
   backgroundView: {
     zIndex: -1,
