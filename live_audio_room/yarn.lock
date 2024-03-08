@@ -1616,15 +1616,15 @@
     "@typescript-eslint/types" "5.47.0"
     eslint-visitor-keys "^3.3.0"
 
-"@zegocloud/zego-uikit-prebuilt-live-audio-room-rn@^2.2.3":
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/@zegocloud/zego-uikit-prebuilt-live-audio-room-rn/-/zego-uikit-prebuilt-live-audio-room-rn-2.2.3.tgz#5b6cd41d81905852c0ea1447c153e4c144aef8c5"
-  integrity sha512-ufOC/62VawyGFpGcuNUG0UqCF2YNQCi/EGXwzDJlAz83Ztd+sIXKJLva0YlVbZZWSJ/8ThuOAO7+iBcpP9lBiQ==
+"@zegocloud/zego-uikit-prebuilt-live-audio-room-rn@^2.3.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@zegocloud/zego-uikit-prebuilt-live-audio-room-rn/-/zego-uikit-prebuilt-live-audio-room-rn-2.3.1.tgz#4e1776c259efbb405913a1e61bd2686952e060ad"
+  integrity sha512-rhEyNU4QykGnVDhJuwF217dKOdTaIIdX0fwqQp7/Y14G6ZyjxDGx8W7T8p1pQvRlMqHyr+d2PzN6fJY3lSTIxQ==
 
-"@zegocloud/zego-uikit-rn@^2.5.1":
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/@zegocloud/zego-uikit-rn/-/zego-uikit-rn-2.5.1.tgz#43a879abc51a38ddca122a97c7dc966a684bda0c"
-  integrity sha512-YvJeZVsww7S2LpXjHpefC5gfWU+9vN2YW9M4+b1Vd9fRzX21XGE14lAQ+DyhIDEvPGaMYM3SOKC0d9hM3sEcdg==
+"@zegocloud/zego-uikit-rn@^2.7.0":
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/@zegocloud/zego-uikit-rn/-/zego-uikit-rn-2.7.0.tgz#b41ee140df01881dbfceeb8b03c3948555a9b0a6"
+  integrity sha512-blj7CjkmpngbUb8+PlYYkmRVqUF1WXdHZUUumWrPsU8GV3GAq+LBaSL6zbzurucRnEUo27Wm4E3p2Yln3U9rtA==
   dependencies:
     react-delegate-component "^1.0.0"
     zego-express-engine-reactnative "3.2.0"

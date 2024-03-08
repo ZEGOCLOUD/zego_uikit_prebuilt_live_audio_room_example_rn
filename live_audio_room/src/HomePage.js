@@ -7,7 +7,7 @@ export default function HomePage(props) {
   const onJoinPress = isHost => {
     navigation.navigate(isHost ? 'HostPage' : 'AudiencePage', {
       userID: userID,
-      userName: userID,
+      userName: 'user_' + userID,
       roomID: roomID,
     });
   };

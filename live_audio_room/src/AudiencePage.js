@@ -101,7 +101,7 @@ export default function AudiencePage(props) {
           topMenuBarConfig: {
             buttons: [ZegoMenuBarButtonName.minimizingButton, ZegoMenuBarButtonName.leaveButton],
           },
-          onLeaveConfirmation: () => {
+          onLeave: () => {
             props.navigation.navigate('HomePage');
           },
           onSeatTakingRequestRejected: () => {

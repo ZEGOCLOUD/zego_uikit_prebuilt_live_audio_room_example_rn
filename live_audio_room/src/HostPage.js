@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View, Text, Image, ImageBackground} from 'react-native';
+import {StyleSheet, View, Text, Image, ImageBackground, Alert} from 'react-native';
 import ZegoUIKitPrebuiltLiveAudioRoom, {
   HOST_DEFAULT_CONFIG,
   ZegoMenuBarButtonName,
@@ -101,8 +101,33 @@ export default function HostPage(props) {
             buttons: [ZegoMenuBarButtonName.minimizingButton, ZegoMenuBarButtonName.leaveButton],
           },
           background,
-          onLeaveConfirmation: () => {
+          confirmDialogInfo: {
+            title: 'Leave the room',
+            message: 'Are you sure to leave the room?',
+            cancelButtonName: 'Cancel',
+            confirmButtonName: 'OK',
+          },
+          onLeave: () => {
             props.navigation.navigate('HomePage');
+          },
+          onLeaveConfirming: () => {
+            return new Promise((resolve, reject) => {
+              Alert.alert(
+                'This is your custom dialog.',
+                'You can customize this dialog as needed.',
+                [
+                  {
+                    text: 'Cancel',
+                    onPress: () => reject(),
+                    style: 'cancel',
+                  },
+                  {
+                    text: 'Exit',
+                    onPress: () => resolve(),
+                  },
+                ],
+              );
+            });
           },
           onSeatTakingRequested: (audience) => {
             console.log('[Demo]HostPage onSeatTakingRequested ', audience);
