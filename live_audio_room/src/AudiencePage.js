@@ -122,6 +122,12 @@ export default function AudiencePage(props) {
           onSeatsOpened: () => {
             console.log('[Demo]AudiencePage onSeatsOpened ');
           },
+          onSeatClosed: (index) => {
+            console.log('[Demo]AudiencePage onSeatClosed: ', index);
+          },
+          onSeatOpened: (index) => {
+            console.log('[Demo]AudiencePage onSeatOpened: ', index);
+          },
           onTurnOnYourMicrophoneRequest: (fromUser) => {
             console.log('[Demo]AudiencePage onTurnOnYourMicrophoneRequest ', fromUser);
           },

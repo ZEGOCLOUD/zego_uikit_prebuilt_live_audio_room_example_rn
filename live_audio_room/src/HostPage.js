@@ -150,6 +150,12 @@ export default function HostPage(props) {
           onSeatsOpened: () => {
             console.log('[Demo]HostPage onSeatsOpened ');
           },
+          onSeatClosed: (index) => {
+            console.log('[Demo]HostPage onSeatClosed: ', index);
+          },
+          onSeatOpened: (index) => {
+            console.log('[Demo]HostPage onSeatOpened: ', index);
+          },
           onTurnOnYourMicrophoneRequest: (fromUser) => {
             console.log('[Demo]HostPage onTurnOnYourMicrophoneRequest ', fromUser);
           },
