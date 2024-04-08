@@ -2076,10 +2076,10 @@
   resolved "https://registry.yarnpkg.com/@ungap/structured-clone/-/structured-clone-1.2.0.tgz#756641adb587851b5ccb3e095daf27ae581c8406"
   integrity sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==
 
-"@zegocloud/zego-uikit-prebuilt-live-audio-room-rn@^2.4.1":
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/@zegocloud/zego-uikit-prebuilt-live-audio-room-rn/-/zego-uikit-prebuilt-live-audio-room-rn-2.4.1.tgz#75b1fc11810757a3c2f069aa10e5ee50c481814d"
-  integrity sha512-in50LIoYh7kkKNLCL27p5UPHbmfOns8blCUqp2RDPPhZsCTGALuJhYgjkn4aUpRjW1oNKMtrHfozcUOQGiGCdQ==
+"@zegocloud/zego-uikit-prebuilt-live-audio-room-rn@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@zegocloud/zego-uikit-prebuilt-live-audio-room-rn/-/zego-uikit-prebuilt-live-audio-room-rn-2.5.0.tgz#c9eafcca9caa99b92bfbd9a80f8d5e819e22506d"
+  integrity sha512-EeOVwOv+A3Kl4CDxHMcFW6IdD3YkdPBQO9ZQD05gANuJXyKopZIQ+4lI6GxZzjC0ZNCS9tSAQkLGm6SsDD/5EA==
 
 "@zegocloud/zego-uikit-rn@^2.7.4":
   version "2.7.4"

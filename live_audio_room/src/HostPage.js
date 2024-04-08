@@ -58,6 +58,16 @@ export default function HostPage(props) {
       }
     </View>
   };
+
+  const rowBackgroundBuilder = ({rowIndex}) => {
+    return rowIndex == 0 ? (
+      <View style={{flex: 1, width: '100%', height: '100%', backgroundColor: 'skyblue', justifyContent: 'space-around', alignItems: 'center', flexDirection: 'row'}}>
+        <View style={{backgroundColor: 'red', width: 30, height: 30}}></View>
+        <View style={{backgroundColor: 'red', width: 30, height: 30}}></View>
+      </View>
+    ) : null;
+  }
+
   const image = {uri: 'xxx'};
   const background = () => {
     return (
@@ -96,6 +106,7 @@ export default function HostPage(props) {
             backgroundColor,
             foregroundBuilder,
             avatarBuilder,
+            // rowBackgroundBuilder,
           },
           topMenuBarConfig: {
             buttons: [ZegoMenuBarButtonName.minimizingButton, ZegoMenuBarButtonName.leaveButton],
