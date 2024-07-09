@@ -438,7 +438,7 @@ PODS:
     - React-Core
   - SocketRocket (0.6.1)
   - Yoga (1.14.0)
-  - zego-uikit-rn (2.7.4):
+  - zego-uikit-rn (2.12.0):
     - React-Core
   - ZegoExpressEngine (3.2.0):
     - ZegoExpressEngine/Video (= 3.2.0)
@@ -639,10 +639,10 @@ SPEC CHECKSUMS:
   RNScreens: 3c5b9f4a9dcde752466854b6109b79c0e205dad3
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Yoga: 8796b55dba14d7004f980b54bcc9833ee45b28ce
-  zego-uikit-rn: 6078270556aedaa4723041591112a8e46590b181
+  zego-uikit-rn: 989e793239229f154892a85eafd61f890dc7c5c0
   ZegoExpressEngine: 7ddbd7134c03c45bfdcddb61f4d76a1486518425
   ZIM: 57ce22334b15f918ec13ce88e9632d3ebe36d5ba
 
 PODFILE CHECKSUM: dab0851336b746da4119116239f5ed2af1edb48e
 
-COCOAPODS: 1.14.3
+COCOAPODS: 1.15.2

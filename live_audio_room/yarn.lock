@@ -2076,20 +2076,20 @@
   resolved "https://registry.yarnpkg.com/@ungap/structured-clone/-/structured-clone-1.2.0.tgz#756641adb587851b5ccb3e095daf27ae581c8406"
   integrity sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==
 
-"@zegocloud/zego-uikit-prebuilt-live-audio-room-rn@^2.5.0":
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/@zegocloud/zego-uikit-prebuilt-live-audio-room-rn/-/zego-uikit-prebuilt-live-audio-room-rn-2.5.0.tgz#c9eafcca9caa99b92bfbd9a80f8d5e819e22506d"
-  integrity sha512-EeOVwOv+A3Kl4CDxHMcFW6IdD3YkdPBQO9ZQD05gANuJXyKopZIQ+4lI6GxZzjC0ZNCS9tSAQkLGm6SsDD/5EA==
+"@zegocloud/zego-uikit-prebuilt-live-audio-room-rn@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@zegocloud/zego-uikit-prebuilt-live-audio-room-rn/-/zego-uikit-prebuilt-live-audio-room-rn-2.6.0.tgz#9d0b3bf31602843e0897984762095bad565ec947"
+  integrity sha512-R+qMDRXs9h99jJKQw27E5ZECzzbbn70CoKBQsXeGuPaRGbpQ0RcXUODYdWUMZEOJxSWkY/i8pcmzova0jB/KFg==
 
-"@zegocloud/zego-uikit-rn@^2.7.4":
-  version "2.7.4"
-  resolved "https://registry.yarnpkg.com/@zegocloud/zego-uikit-rn/-/zego-uikit-rn-2.7.4.tgz#f14417e7c38cd7beb6f202d32bc6033dae5f4eb3"
-  integrity sha512-dM2JlbFjHnuxfIhDbXwOgv7VFRhpKIEwPKdoJK9tz2xBHjzxHC3IZO++AwaEpeOhhXKTPO42C5ZAzpLq80nLiw==
+"@zegocloud/zego-uikit-rn@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@zegocloud/zego-uikit-rn/-/zego-uikit-rn-2.12.0.tgz#9a94cbd4704d5c8256e2115b0d56594432231fb9"
+  integrity sha512-Tjm5G8ZA4zbP5YrkiMXcDSlKBD72vKjceGLq7VLHnq6FjMUPYDcdebQfPE/rzbT55OYM9Q9aYKPrY6zcLbqR4A==
   dependencies:
     react-delegate-component "^1.0.0"
-    zego-express-engine-reactnative "3.2.0"
+    zego-express-engine-reactnative "3.14.5"
     zego-zim-react-native "2.12.1"
-    zego-zpns-react-native "2.5.0-alpha"
+    zego-zpns-react-native "2.5.2-alpha"
 
 abort-controller@^3.0.0:
   version "3.0.0"
@@ -7116,6 +7116,11 @@ yocto-queue@^0.1.0:
   resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
 
+zego-express-engine-reactnative@3.14.5:
+  version "3.14.5"
+  resolved "https://registry.yarnpkg.com/zego-express-engine-reactnative/-/zego-express-engine-reactnative-3.14.5.tgz#fbc58a3f82137cc92ba47815df1c1fcfc7331c04"
+  integrity sha512-69jy89OFg5eog6Wxhe8Wl67zcAz3fA+Jdz6T2aSBA2dtFNT07dbeoK51743TjZ1yKM3rkAwe2MhNzYOpfZ8xug==
+
 zego-express-engine-reactnative@3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/zego-express-engine-reactnative/-/zego-express-engine-reactnative-3.2.0.tgz#e4098a7ff0434110e9363e231d896f4bb0eec900"
@@ -7126,7 +7131,7 @@ zego-zim-react-native@2.12.1:
   resolved "https://registry.yarnpkg.com/zego-zim-react-native/-/zego-zim-react-native-2.12.1.tgz#7bd0b5b7104e686ce6f56bd8093da19bb0b91300"
   integrity sha512-992pMz47Zg3QYii2vcB+JkQBYmJ0qV6uLH2gHPLpN+FBTr5AEBW6EbLju2BR0nf+zdtck7BrS1zxzralR1pvGQ==
 
-zego-zpns-react-native@2.5.0-alpha:
-  version "2.5.0-alpha"
-  resolved "https://registry.yarnpkg.com/zego-zpns-react-native/-/zego-zpns-react-native-2.5.0-alpha.tgz#30f8002944823c9bc2265710dd65f32c746fb5c3"
-  integrity sha512-x4nRNZYrk7oP7pe0Y0DVT1h8Y9JeDldjA0ma8tAoQH8i6LGvhtnG+Ke6cY5azOrXWVMM4j580Gz9/8XXAOnO3g==
+zego-zpns-react-native@2.5.2-alpha:
+  version "2.5.2-alpha"
+  resolved "https://registry.yarnpkg.com/zego-zpns-react-native/-/zego-zpns-react-native-2.5.2-alpha.tgz#d99d44a4cb2cbb21d731037e4fa438addfcce4cb"
+  integrity sha512-ta36wt7CmMpSWCxs1DOpQECvTK9dzo2pl2EFdUhuUqPrt/+0Y0j0+hmP2VYX9ScFjwAY0jfHVpVzGMe+GHwjVQ==
