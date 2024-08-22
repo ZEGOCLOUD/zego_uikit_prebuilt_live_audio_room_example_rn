@@ -69,7 +69,7 @@ yarn add @zegocloud/zego-uikit-prebuilt-live-audio-room-rn
 Run the following command to install other dependencies for making sure the `@zegocloud/zego-uikit-prebuilt-live-audio-room-rn` can work properly:
 
 ```bash
-yarn add react-delegate-component zego-express-engine-reactnative@3.2.0 zego-zim-react-native@2.5.0 zego-zpns-react-native@2.2.0 @zegocloud/zego-uikit-rn @zegocloud/zego-uikit-signaling-plugin-rn
+yarn add react-delegate-component zego-express-engine-reactnative@^3.14.5 zego-zim-react-native@2.16.0 @zegocloud/zego-uikit-rn
 ```
 
 ### Using the ZegoUIKitPrebuiltLiveAudioRoom Component in your project

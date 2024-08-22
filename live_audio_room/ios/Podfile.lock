@@ -317,12 +317,12 @@ PODS:
     - glog
   - react-native-safe-area-context (4.9.0):
     - React-Core
-  - react-native-zego-express-engine (3.2.0):
+  - react-native-zego-express-engine (3.16.2):
     - React
-    - ZegoExpressEngine (= 3.2.0)
-  - react-native-zego-zim (2.12.1):
+    - ZegoExpressEngine (= 3.16.1)
+  - react-native-zego-zim (2.16.0):
     - React
-    - ZIM (= 2.12.1)
+    - ZIM (= 2.16.0)
   - React-NativeModulesApple (0.72.3):
     - hermes-engine
     - React-callinvoker
@@ -438,12 +438,10 @@ PODS:
     - React-Core
   - SocketRocket (0.6.1)
   - Yoga (1.14.0)
-  - zego-uikit-rn (2.12.0):
+  - zego-uikit-rn (2.14.2):
     - React-Core
-  - ZegoExpressEngine (3.2.0):
-    - ZegoExpressEngine/Video (= 3.2.0)
-  - ZegoExpressEngine/Video (3.2.0)
-  - ZIM (2.12.1)
+  - ZegoExpressEngine (3.16.1)
+  - ZIM (2.16.0)
 
 DEPENDENCIES:
   - boost (from `../node_modules/react-native/third-party-podspecs/boost.podspec`)
@@ -617,8 +615,8 @@ SPEC CHECKSUMS:
   React-jsinspector: b511447170f561157547bc0bef3f169663860be7
   React-logger: c5b527272d5f22eaa09bb3c3a690fee8f237ae95
   react-native-safe-area-context: b97eb6f9e3b7f437806c2ce5983f479f8eb5de4b
-  react-native-zego-express-engine: 47e48e9e647bc973827a04f0c09723a9f3421feb
-  react-native-zego-zim: 8ccf8bca633b2a947b1407c9f2a76767c1667154
+  react-native-zego-express-engine: 9026b009988e57074b405632fdb16a5674ecc7df
+  react-native-zego-zim: a52474972053e92337e20ad8e672bd8f73814232
   React-NativeModulesApple: c57f3efe0df288a6532b726ad2d0322a9bf38472
   React-perflogger: 6bd153e776e6beed54c56b0847e1220a3ff92ba5
   React-RCTActionSheet: c0b62af44e610e69d9a2049a682f5dba4e9dff17
@@ -639,9 +637,9 @@ SPEC CHECKSUMS:
   RNScreens: 3c5b9f4a9dcde752466854b6109b79c0e205dad3
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Yoga: 8796b55dba14d7004f980b54bcc9833ee45b28ce
-  zego-uikit-rn: 989e793239229f154892a85eafd61f890dc7c5c0
-  ZegoExpressEngine: 7ddbd7134c03c45bfdcddb61f4d76a1486518425
-  ZIM: 57ce22334b15f918ec13ce88e9632d3ebe36d5ba
+  zego-uikit-rn: 6a5fc41333afcf7bd03b7844f03864283acf3f82
+  ZegoExpressEngine: a274d6b13028987453d80928a095c36b8011f32d
+  ZIM: 689608cfd428d0ad6d6784c0c42f8d0bf7c29bc0
 
 PODFILE CHECKSUM: dab0851336b746da4119116239f5ed2af1edb48e
 
