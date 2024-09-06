@@ -6,6 +6,8 @@
 <string>We need to use the camera</string>
 <key>NSMicrophoneUsageDescription</key>
 <string>We need to use the microphone</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>

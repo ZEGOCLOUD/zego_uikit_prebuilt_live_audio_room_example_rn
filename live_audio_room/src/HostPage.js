@@ -1,12 +1,19 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import {StyleSheet, View, Text, Image, ImageBackground, Alert} from 'react-native';
 import ZegoUIKitPrebuiltLiveAudioRoom, {
   HOST_DEFAULT_CONFIG,
   ZegoMenuBarButtonName,
   ZegoLiveAudioRoomLayoutAlignment,
 } from '@zegocloud/zego-uikit-prebuilt-live-audio-room-rn';
+
 import KeyCenter from "../KeyCenter";
+import backgroundImage from './resources/background.png';
+import CohostRequestList from './CohostRequestList';
+
 export default function HostPage(props) {
+  const prebuiltRef = useRef();
+  const cohostRequestListRef = useRef();
+
   const {route} = props;
   const {params} = route;
   const {userID, userName, roomID} = params;
@@ -68,11 +75,10 @@ export default function HostPage(props) {
     ) : null;
   }
 
-  const image = {uri: 'xxx'};
   const background = () => {
     return (
       <View style={styles.backgroundView}>
-        <ImageBackground source={image} style={styles.image}>
+        <ImageBackground source={backgroundImage} style={styles.image}>
           <View style={styles.titleBar}>
             <Text style={styles.title}>A Live Audio Room</Text>
             <Text style={styles.id}>ID:{roomID}</Text>
@@ -84,6 +90,7 @@ export default function HostPage(props) {
   return (
     <View style={styles.container}>
       <ZegoUIKitPrebuiltLiveAudioRoom
+        ref={prebuiltRef}
         appID={KeyCenter.appID}
         appSign={KeyCenter.appSign}
         userID={userID}
@@ -110,6 +117,20 @@ export default function HostPage(props) {
           },
           topMenuBarConfig: {
             buttons: [ZegoMenuBarButtonName.minimizingButton, ZegoMenuBarButtonName.leaveButton],
+          },
+          emptyArea: () => {
+            return <CohostRequestList
+              ref={cohostRequestListRef}
+              acceptSeatTakingRequest={ (userID) => {
+                prebuiltRef.current.acceptSeatTakingRequest(userID)
+              }}
+              rejectSeatTakingRequest={ (userID) => {
+                prebuiltRef.current.rejectSeatTakingRequest(userID)
+              }}
+            />
+          },
+          onSeatTakingRequestListChange: (requestInfoList) => {
+            cohostRequestListRef.current.onSeatTakingRequestListChange(requestInfoList)
           },
           background,
           confirmDialogInfo: {
@@ -148,6 +169,9 @@ export default function HostPage(props) {
           },
           onSeatTakingInviteRejected: () => {
             console.log('[Demo]HostPage onSeatTakingInviteRejected ');
+          },
+          onSeatTakingRequestTimeout: (audience) => {
+            console.log('[Demo]HostPage onSeatTakingRequestTimeout ', audience);
           },
           // onMemberListMoreButtonPressed: (user) => {
           //   console.log('[Demo]HostPage onMemberListMoreButtonPressed ', user);

@@ -5,7 +5,10 @@ import ZegoUIKitPrebuiltLiveAudioRoom, {
   ZegoMenuBarButtonName,
   ZegoLiveAudioRoomLayoutAlignment,
 } from '@zegocloud/zego-uikit-prebuilt-live-audio-room-rn';
+
 import KeyCenter from "../KeyCenter";
+import backgroundImage from './resources/background.png';
+
 export default function AudiencePage(props) {
   const {route} = props;
   const {params} = route;
@@ -68,11 +71,10 @@ export default function AudiencePage(props) {
     ) : null;
   }
 
-  const image = {uri: 'xxx'};
   const background = () => {
     return (
       <View style={styles.backgroundView}>
-        <ImageBackground source={image} style={styles.image}>
+        <ImageBackground source={backgroundImage} style={styles.image}>
           <View style={styles.titleBar}>
             <Text style={styles.title}>A Live Audio Room</Text>
             <Text style={styles.id}>ID:{roomID}</Text>
