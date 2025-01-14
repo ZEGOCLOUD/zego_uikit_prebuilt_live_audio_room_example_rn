@@ -16,7 +16,8 @@
       android:icon="@mipmap/live_audio_room_kit"
       android:roundIcon="@mipmap/live_audio_room_kit"
       android:allowBackup="false"
-      android:theme="@style/AppTheme">
+      android:theme="@style/AppTheme"
+      android:supportsRtl="true">
       <activity
         android:name=".MainActivity"
         android:label="@string/app_name"
